@@ -6,13 +6,37 @@
 	</head>
 	<body>
 		<div id="app">
-			
+			<div>{{msg}}</div>
+			<div v-text="name"></div>
+			<div v-text="prosein.info"></div>
+			<div v-html="dom"></div>
+			<div>{{prosein.age}}</div>
+			<div> 
+				<span>{{msg}}</span>
+			</div>
+			<input type="text" v-model="inp">
+			<button type="button" v-on:click="add">add</button>
 		</div>
 	</body>
 	<script src="./MVue.js"></script>
 	<script>
 		let vm=new MVue({
-			el:'#app'
+			el:'#app',
+			data:{
+				prosein:{
+					age:18,
+					info:'123123213131213'
+				},
+				msg:'1231',
+				name:'zhangsan',
+				dom:'<p>121313131</p>',
+				inp:'54545645645645656'
+			},
+			methods:{
+				add(){
+					
+				}
+			}
 		})
 	</script>
 </html>
